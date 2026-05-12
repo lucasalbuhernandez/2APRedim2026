@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Configurador de Bicicletas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img class="banner" src="Banner.png" alt="">
+    <h1>Selecione as peças da sua bike</h1>
+</header>
+
+<!-- Barra de etapas -->
+<div class="etapas">
+    <div class="etapa ativa" onclick="scrollPara('quadro')">Quadro</div>
+    <div class="etapa" onclick="scrollPara('banco')">Banco</div>
+    <div class="etapa" onclick="scrollPara('roda')">Roda</div>
+    <div class="etapa" onclick="scrollPara('pneu')">Pneu</div>
+</div>
+
+<!-- Montagem -->
+<div class="montagem">
+
+    <!-- Quadro -->
+    <div class="peca" id="quadro">
+        <h2>Escolha o Quadro</h2>
+        <div class="opcoes">
+
+            <button class="img-btn" onclick="selecionar('quadro','Quadro Verde',event)">
+                <img src="Quadro Verde.png">
+                <h3>Quadro Verde</h3>
+            </button>
+
+            <button class="img-btn" onclick="selecionar('quadro','Quadro Amarelo',event)">
+                <img src="Quadro Amarelo.png">
+                <h3>Quadro Amarelo</h3>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Banco -->
+    <div class="peca" id="banco">
+        <h2>Escolha o Banco</h2>
+        <div class="opcoes">
+
+            <button class="img-btn" onclick="selecionar('banco','Banco Azul',event)">
+                <img src="Banco Azul.png">
+                <h3>Banco Azul</h3>
+            </button>
+
+            <button class="img-btn" onclick="selecionar('banco','Banco Verde',event)">
+                <img src="Banco Verde.png">
+                <h3>Banco Verde</h3>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Roda -->
+    <div class="peca" id="roda">
+        <h2>Escolha a Roda</h2>
+        <div class="opcoes">
+
+            <button class="img-btn" onclick="selecionar('roda','Roda Vermelha',event)">
+                <img src="Roda Vermelha.png">
+                <h3>Roda Vermelha</h3>
+            </button>
+
+            <button class="img-btn" onclick="selecionar('roda','Roda Preta',event)">
+                <img src="Roda Preta.png">
+                <h3>Roda Preta</h3>
+            </button>
+
+            <button class="img-btn" onclick="selecionar('roda','Roda Amarela',event)">
+                <img src="Roda Amarela.png">
+                <h3>Roda Amarela</h3>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Pneu -->
+    <div class="peca" id="pneu">
+        <h2>Escolha o Pneu</h2>
+        <div class="opcoes">
+
+            <button class="img-btn" onclick="selecionar('pneu','Pneu Preto',event)">
+                <img src="Pneu Preto.png">
+                <h3>Pneu Preto</h3>
+            </button>
+
+            <button class="img-btn" onclick="selecionar('pneu','Pneu Vermelho',event)">
+                <img src="Pneu Vermelho.png">
+                <h3>Pneu Vermelho</h3>
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Resumo -->
+<div class="resumo">
+    <h2>Sua Bike:</h2>
+    <p>Quadro: <span id="res-quadro">Nenhum</span></p>
+    <p>Banco: <span id="res-banco">Nenhum</span></p>
+    <p>Roda: <span id="res-roda">Nenhum</span></p>
+    <p>Pneu: <span id="res-pneu">Nenhum</span></p>
+    
+    <button class="finalizar" type="button" id="btn-ir-login">Finalizar Pedido</button>
+</div>
+
+<footer>
+    <p>Projeto SENAI Volkswagen REDIM 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

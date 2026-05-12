@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Operador - VW REDIM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para organizar as duas colunas ou seções */
+        .secao-titulo {
+            text-align: center;
+            margin: 30px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        #container-historico .card-producao {
+            filter: grayscale(0.5); /* Deixa o histórico um pouco mais discreto */
+            transition: 0.3s;
+        }
+
+        #container-historico .card-producao:hover {
+            filter: grayscale(0); /* Volta a cor ao passar o mouse */
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="carregarDadosOperador()">
+
+<header>
+    <h1>Painel de Controle de Produção</h1>
+    <div class="badges">
+        <span class="badge" style="background: #ffcc00; color: #000;">FILA ATIVA</span>
+        <span class="badge" style="background: #ff0000; color: #fff;">RETRABALHO</span>
+        <span class="badge" style="background: #3caf18; color: #fff;">ENTREGUE</span>
+    </div>
+</header>
+
+<main>
+    <h2 class="secao-titulo" style="color: #ffcc00;">🕒 Linha de Montagem Atual</h2>
+    <div id="container-pedidos" class="container-pedidos">
+        </div>
+
+    <hr style="border: 1px solid #333; margin: 50px 100px;">
+
+    <h2 class="secao-titulo" style="color: #3caf18;">✅ Bikes Entregues (Histórico)</h2>
+    <div id="container-historico" class="container-pedidos">
+        </div>
+</main>
+
+<footer>
+    <p>Sistema de Gestão Industrial - SENAI VW REDIM 2026</p>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

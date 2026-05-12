@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurador de Bicicletas | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img class="banner" src="Banner.png" alt="">
+    <h1>Faça login para concluir a compra</h1>
+</header>
+
+<div class="etapas">
+    <div class="etapa" id="btn-voltar-selecao" style="cursor: pointer;">Voltar</div>
+    <div class="etapa ativa">Login</div>
+</div>
+
+<main class="container-login">
+    <div class="login-card">
+        <h2>Dados do Aluno</h2>
+        <p>Preencha para enviar sua configuração para a montagem.</p>
+        
+        <form id="loginForm">
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="unidade">Turma</label>
+                <select id="unidade" name="unidade">
+                    <option value="1apa">1AP/A</option>
+                    <option value="1apb">1AP/B</option>
+                    <option value="2apa">2AP/A</option>
+                    <option value="2apb">2AP/B</option>
+                    <option value="1tca">1TC/A</option>
+                    <option value="1tcb">1TC/B</option>
+                    <option value="1tcc">1TC/C</option>
+                    <option value="1tcd">1TC/D</option>
+                    <option value="2tca">2TC/A</option>
+                    <option value="2tcb">2TC/B</option>
+                    <option value="prof">PROF(A)</option>
+                </select>
+            </div>
+
+            <div class="resumo">
+                <h2>Sua Configuração Atual:</h2>
+                <p>Quadro: <span id="res-quadro">Carregando...</span></p>
+                <p>Banco: <span id="res-banco">Carregando...</span></p>
+                <p>Roda: <span id="res-roda">Carregando...</span></p>
+                <p>Pneu: <span id="res-pneu">Carregando...</span></p>
+                
+                <button type="submit" class="finalizar">Finalizar e Enviar</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>Projeto SENAI Volkswagen REDIM 2026</p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
