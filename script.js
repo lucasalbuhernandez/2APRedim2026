@@ -23,11 +23,12 @@ try {
 // ============================================================
 const etapasFábrica = [
     "Preparando", 
-    "Montando Quadro", 
-    "Montando Banco", 
-    "Montando Rodas", 
-    "Montando Pé de vela", 
-    "Ajuste Final", 
+    "Colocando componentes do quadro", 
+    "Fixando roda dianteira", 
+    "Fixando pedivela", 
+    "Fixando componentes da catraca", 
+    "Fixando roda traseira",
+    "Empacotando",
     "Pronto para Entrega"
 ];
 
